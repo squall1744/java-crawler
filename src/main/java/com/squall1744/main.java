@@ -24,7 +24,6 @@ public class main {
 
             System.out.println(IOUtils.toString(entity.getContent(), StandardCharsets.UTF_8));
 
-
             EntityUtils.consume(entity);
         } catch (IOException e) {
             e.printStackTrace();
