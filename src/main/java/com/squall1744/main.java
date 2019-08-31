@@ -28,7 +28,6 @@ public class main {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
     public static void main(String[] args) {
         getIndexPage("https://xiedaimala.com");
