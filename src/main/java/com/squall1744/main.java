@@ -31,6 +31,6 @@ public class main {
 
     }
     public static void main(String[] args) {
-        getIndexPage("https://sina.cn");
+        getIndexPage("https://xiedaimala.com");
     }
 }
