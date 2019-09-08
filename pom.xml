@@ -2,8 +2,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>hcsp</groupId>
-    <artifactId>remove-duplicate-chars-in-string</artifactId>
+    <groupId>com.squall1744</groupId>
+    <artifactId>java-crawler</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -58,31 +58,53 @@
                     <argLine>-Dfile.encoding=UTF-8</argLine>
                 </configuration>
             </plugin>
-<!--                <plugin>-->
-<!--                    <artifactId>maven-checkstyle-plugin</artifactId>-->
-<!--                    <version>3.0.0</version>-->
-<!--                    <configuration>-->
-<!--                        <configLocation>${basedir}/.circleci/checkstyle.xml</configLocation>-->
-<!--                        <includeTestSourceDirectory>true</includeTestSourceDirectory>-->
-<!--                        <enableRulesSummary>false</enableRulesSummary>-->
-<!--                    </configuration>-->
-<!--                    <executions>-->
-<!--                        <execution>-->
-<!--                            <id>compile</id>-->
-<!--                            <phase>compile</phase>-->
-<!--                            <goals>-->
-<!--                                <goal>check</goal>-->
-<!--                            </goals>-->
-<!--                        </execution>-->
-<!--                    </executions>-->
-<!--                    <dependencies>-->
-<!--                        <dependency>-->
-<!--                            <groupId>com.puppycrawl.tools</groupId>-->
-<!--                            <artifactId>checkstyle</artifactId>-->
-<!--                            <version>8.22</version>-->
-<!--                        </dependency>-->
-<!--                    </dependencies>-->
-<!--                </plugin>-->
+            <plugin>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <configLocation>${basedir}/checkstyle.xml</configLocation>
+                    <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                    <enableRulesSummary>false</enableRulesSummary>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>checkstyle</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.puppycrawl.tools</groupId>
+                        <artifactId>checkstyle</artifactId>
+                        <version>8.24</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>com.github.spotbugs</groupId>-->
+<!--                <artifactId>spotbugs-maven-plugin</artifactId>-->
+<!--                <version>3.1.12</version>-->
+<!--                <dependencies>-->
+<!--                    &lt;!&ndash; overwrite dependency on spotbugs if you want to specify the version of spotbugs &ndash;&gt;-->
+<!--                    <dependency>-->
+<!--                        <groupId>com.github.spotbugs</groupId>-->
+<!--                        <artifactId>spotbugs</artifactId>-->
+<!--                        <version>4.0.0-beta3</version>-->
+<!--                    </dependency>-->
+<!--                </dependencies>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>spotbugs</id>-->
+<!--                        <phase>verify</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>check</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 </project>
