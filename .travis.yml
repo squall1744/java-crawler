@@ -11,4 +11,4 @@ cache:
   # - chmod +x gradlew
 
 script:
-  - mvn clean verify
+  - ./mvnw clean verify
